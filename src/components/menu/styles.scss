@@ -1,0 +1,122 @@
+@import "../../styles/variables";
+
+#menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 100;
+	animation: comeIn 350ms ease-in-out;
+
+	&-left {
+		background-color: $accentSecondaryMain;
+		width: 25%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: $light;
+
+		&-title {
+			text-align: center;
+			font-size: 2rem;
+			color: inherit;
+			padding: 2rem;
+			cursor: default;
+		}
+
+		&-details {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			& div {
+				cursor: pointer;
+				padding: 2rem;
+				transition: background-color 150ms ease-in-out;
+				
+				& a {
+					text-decoration: none;
+					color: inherit;
+					font-size: 1.5rem;
+				}
+
+				&:hover {
+					background-color: $accentSecondaryDark;
+				}
+			}
+		}
+	}
+
+	&-right {
+		background-color: $accentPrimaryMain;
+		width: 75%;
+		height: 100%;
+		color: $light;
+
+		&-details {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			& div {
+				cursor: pointer;
+				
+				
+				& a {
+					text-decoration: none;
+					color: inherit;
+					font-size: 2.5rem;
+					display: flex;
+					justify-content: start;
+					align-items: center;
+					padding: 2rem 5rem;
+					transition: all 150ms ease-in-out;
+					
+					&:hover {
+						background-color: $accentPrimaryDark;
+					}
+				}
+
+			}
+		}
+
+		&-exit {
+			position: fixed;
+			top: 0;
+			right: 0;
+			color: $light;
+			font-size: 3rem;
+			padding: 2rem;
+			transition: all 150ms ease-in-out;
+
+			&:hover {
+				color: $accentSecondaryMain;
+				cursor: pointer;
+			}
+		}
+	}
+
+	@keyframes comeIn {
+		from {
+			transform: translateY(-100%);
+		}
+
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes goOut {
+		from {
+			transform: translateY(0);
+		}
+
+		to {
+			transform: translateY(-100%);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+#no-match {
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		font-size: 5rem;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 2rem;
+		margin: 0;
+	}
+}

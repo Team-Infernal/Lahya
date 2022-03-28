@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+#navbar {
+	position: sticky;
+	background-color: $accentPrimaryMain;
+	color: $light;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	cursor: default;
+
+	&-title h1 {
+		margin: 0;
+		padding: 2rem;
+		font-size: 3rem;
+	}
+
+	&-menu {
+		padding: 2rem;
+		font-size: 3rem;
+		transition: all 150ms ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			color: $accentSecondaryMain;
+		}
+	}
+}
