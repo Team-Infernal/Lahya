@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+#homepage {
+
+	color: $textDark;
+
+	&-title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 50vh;
+
+		h1 {
+			margin: 1rem;
+			font-size: 7rem;
+		}
+
+		p {
+			margin: 1rem;
+			font-size: 2rem;
+		}
+	}
+}

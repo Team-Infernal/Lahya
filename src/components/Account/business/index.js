@@ -1,3 +1,2 @@
-import config from "../../config";
-import "./styles.scss";
-
+import config from "../../../config";
+import "../styles.scss";

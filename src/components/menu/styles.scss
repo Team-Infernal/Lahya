@@ -8,7 +8,7 @@
 	height: 100%;
 	display: flex;
 	z-index: 100;
-	animation: comeIn 350ms ease-in-out;
+	animation: comeIn 200ms ease-in-out;
 
 	&-left {
 		background-color: $accentSecondaryMain;
@@ -90,7 +90,7 @@
 			right: 0;
 			color: $light;
 			font-size: 3rem;
-			padding: 2rem;
+			padding: 1rem;
 			transition: all 150ms ease-in-out;
 
 			&:hover {

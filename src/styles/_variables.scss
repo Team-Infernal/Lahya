@@ -1,4 +1,5 @@
 $light: #f8f8ff;
+$darkish: #2c2c2c;
 $dark: #0d0d0d;
 
 $accentPrimaryMain: #2f01e7;
@@ -7,3 +8,5 @@ $accentPrimaryDark: #1f0198;
 $accentSecondaryMain: #ebb804;
 $accentSecondaryLight: #fbcd27;
 $accentSecondaryDark: #ec9d04;
+
+$textDark: lighten($dark, 10%);

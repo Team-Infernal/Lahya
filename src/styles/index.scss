@@ -1,8 +1,47 @@
+@import "./variables";
+
 body {
 	margin: 0;
 	font-family: "Montserrat Alternates", sans-serif;
 
 	.bold {
 		font-weight: bold;
+	}
+
+	.italic {
+		font-style: italic;
+	}
+
+	.accent {
+		&-primary {
+			color: $accentPrimaryMain;
+
+			&-light {
+				color: $accentPrimaryLight
+			}
+
+			&-dark {
+				color: $accentPrimaryDark;
+			}
+		}
+
+		&-secondary {
+			color: $accentSecondaryMain;
+
+			&-light {
+				color: $accentSecondaryLight;
+			}
+
+			&-dark {
+				color: $accentSecondaryDark;
+			}
+		}
+	}
+
+	button {
+		cursor: pointer;
+		border: none;
+		background: none;
+		outline: none;
 	}
 }

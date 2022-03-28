@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+#connection-module {
+	background-color: $accentPrimaryMain;
+	color: $light;
+	border-radius: 2rem;
+	padding: 2rem;
+	width: fit-content;
+
+	&-title {
+		margin: 0 0 2rem 0;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	&-links {
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	&-login {
+		background-color: $accentSecondaryMain;
+		border-radius: 1rem;
+		overflow: hidden;
+		transition: background-color 150ms ease-in-out;
+		
+		&:hover {
+			background-color: $accentSecondaryDark;
+		}
+		
+		& a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem 2rem;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $darkish;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+	}
+
+	&-register {
+		& a {
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

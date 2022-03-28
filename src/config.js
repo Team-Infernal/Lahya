@@ -40,13 +40,13 @@ const config = {
 	},
 	"footer": [
 		{
+			"route": "/terms",
+			"name": "Terms & Conditions",
+		},
+		{
 			"route": "/privacy",
 			"name": "Privacy Policy",
 		},
-		{
-			"route": "/terms",
-			"name": "Terms & Conditions",
-		}
 	],
 	"socials": [
 		{
