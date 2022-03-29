@@ -29,7 +29,7 @@ const config = {
 				"name": "News",
 			},
 			{
-				"route": "/my-account",
+				"route": "/account",
 				"name": "My Account",
 			},
 			{
@@ -51,18 +51,23 @@ const config = {
 	"socials": [
 		{
 			"name": "LinkedIn",
-			"link": "https://linkedin.com",
+			"link": "https://www.linkedin.com/groups/12606458/",
 			"icon": "fa-brands fa-linkedin-in", 
 		},
 		{
 			"name": "Twitter",
-			"link": "https://twitter.com",
+			"link": "https://twitter.com/ContactInfernal",
 			"icon": "fa-brands fa-twitter",
 		},
 		{
 			"name": "Discord",
-			"link": "https://discord.com",
+			"link": "https://discord.gg/team-infernal",
 			"icon": "fa-brands fa-discord",
+		},
+		{
+			"name": "Email",
+			"link": "mailto:contact@teaminfernal.fr",
+			"icon": "fas fa-envelope",
 		},
 		{
 			"name": "Google+",
@@ -74,7 +79,7 @@ const config = {
 		{
 			"title": "Welcome to Lahya!",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>These terms and conditions outline the rules and regulations for the use of Lahya's Website, located at <a href="https://lahya.net">https://lahya.net</a>.</p>
 				</div>
@@ -84,24 +89,24 @@ const config = {
 				<div>
 					<p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title": "Cookies",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>We employ the use of cookies. By accessing Lahya, you agreed to use cookies in agreement with the Lahya's Privacy Policy.</p>
 				</div>
 				<div>
 					<p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title": "License",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>You must not:</p>
 				</div>
@@ -140,13 +145,13 @@ const config = {
 				<div>
 					<p>Unless otherwise stated, Lahya and/or its licensors own the intellectual property rights for all material on Lahya. All intellectual property rights are reserved. You may access this from Lahya for your own personal use subjected to restrictions set in these terms and conditions.</p>
 				</div>
-			</>
+			</div>
 			
 		},
 		{
 			"title": "Hyperlinking to our Content",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>The following organizations may link to our Website without prior written approval:</p>
 				</div>
@@ -224,48 +229,48 @@ const config = {
 				<div>
 					<p>No use of Lahya's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "iFrames",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Content Liability",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Our Privacy",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>Please read <a href="https://lahya.net/privacy">Privacy Policy</a></p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Reservation of Rights",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Removal of links from our website",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
 				</div>
@@ -275,13 +280,12 @@ const config = {
 				<div>
 					<p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Disclaimer",
-			
 			"description":
-			<>
+			<div>
 				<div>
 					<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
 				</div>
@@ -305,32 +309,34 @@ const config = {
 				<div>
 					<p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
 				</div>
-			</>
+			</div>
 		}
 	],
 	"privacy": [
 		{
 			"title" : `Privacy Policy`,
-			"description":  `Last updated: March 28, 2022
-
-			This Privacy Policy describes Our policies and procedures on the collection,
-			use and disclosure of Your information when You use the Service and tells You
-			about Your privacy rights and how the law protects You.
-			
-			We use Your Personal data to provide and improve the Service. By using the
-			Service, You agree to the collection and use of information in accordance with
-			this Privacy Policy. This Privacy Policy has been created with the help of the
-			Privacy Policy Template`
+			"description":
+			<div>
+				<div>
+					<p>Last updated: March 28, 2022</p>
+					<p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+					<p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Template</p>
+				</div>
+			</div>
 		},
 		{
 			"title" : `Interpretation`,
-			"description":  `The words of which the initial letter is capitalized have meanings defined under the following conditions. 
-			The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.`
+			"description":
+			<div>
+				<div>
+					<p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+				</div>
+			</div>
 		},
 		{
 			"title" : "Definitions",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>For the purposes of this Privacy Policy:</p>
 				</div>
@@ -349,21 +355,12 @@ const config = {
 						<li>You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
 					</ul>
 				</div>
-			</>
-		},
-		{
-						<li>Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
-						<li>Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
-						<li>Website refers to Lahya, accessible from <a href="https://lahya.net">https://lahya.net</a></li>
-						<li>You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
-					</ul>
-				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Personal Data",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You.</p>
 				</div>
@@ -379,40 +376,21 @@ const config = {
 						<li>Usage Data</li>
 					</ul>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : "Usage Data",
 			"description":
-			<>
+			<div>
 				<div>
-					<p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You.</p>
+					<p>Usage Data is collected automatically when using the Service. We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
 				</div>
-				<div>
-					<p>Personally identifiable information may include, but is not limited to:</p>
-				</div>
-				<div>
-					<ul>
-						<li>Email address</li>
-						<li>First name and last name</li>
-						<li>Phone number</li>
-						<li>Address, State, Province, ZIP/Postal code, City</li>
-						<li>Usage Data</li>
-					</ul>
-				</div>
-			</>
-			,"description":  `Usage Data is collected automatically when using the Service.
-			We may also collect information that Your browser sends whenever You visit our
-			Service or when You access the Service by or through a mobile device.`,
-			"description":
-			<>
-				
-			</>
+			</div>
 		},
 		{
 			"title": `Tracking Technologies and Cookies`,
 			"description":
-			<>
+			<div>
 				<div>
 					<p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
 					<ul>
@@ -425,19 +403,19 @@ const config = {
 					<p>We use both Session and Persistent Cookies for the purposes set out below:</p>
 					<ul>
 						<li>
-							<p>Necessary / Essential Cookies</p>
+							<h4>Necessary / Essential Cookies</h4>
 							<p>Type: Session Cookies</p>
 							<p>Administered by: Us</p>
 							<p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
 						</li>
 						<li>
-							<p>Cookies Policy / Notice Acceptance Cookies</p>
+							<h4>Cookies Policy / Notice Acceptance Cookies</h4>
 							<p>Type: Persistent Cookies</p>
 							<p>Administered by: Us</p>
 							<p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
 						</li>
 						<li>
-							<p>Functionality Cookies</p>
+							<h4>Functionality Cookies</h4>
 							<p>Type: Persistent Cookies</p>
 							<p>Administered by: Us</p>
 							<p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
@@ -445,12 +423,12 @@ const config = {
 					</ul>
 					<p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
 			"title" : `Use of Your Personal Data `,
 			"description":
-			<>
+			<div>
 				<div>
 					<p>The Company may use Personal Data for the following purposes:</p>
 					<ul>
@@ -473,24 +451,24 @@ const config = {
 						<li>With Your consent : We may disclose Your personal information for any other purpose with Your consent.</li>
 					</ul>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title" : `Retention of Your Personal Data `,
+			"title" : "Retention of Your Personal Data",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
 				</div>
 				<div>
 					<p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title" : `Transfer of Your Personal Data `,
+			"title" : "Transfer of Your Personal Data",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
 				</div>
@@ -500,30 +478,30 @@ const config = {
 				<div>
 					<p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Business Transactions`,
+			"title": "Business Transactions",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Law enforcement`,
+			"title": "Law enforcement",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Other legal requirements`,
+			"title": "Other legal requirements",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
 					<ul>
@@ -534,45 +512,45 @@ const config = {
 						<li>Protect against legal liability</li>
 					</ul>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Security of Your Personal Data `,
+			"title": "Security of Your Personal Data",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Children's Privacy`,
+			"title": "Children's Privacy",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
 				</div>
 				<div>
 					<p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Links to Other Websites  `,
+			"title": "Links to Other Websites",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
 				</div>
 				<div>
 					<p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Changes to this Privacy Policy`,
+			"title": "Changes to this Privacy Policy",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
 				</div>
@@ -582,19 +560,19 @@ const config = {
 				<div>
 					<p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
 				</div>
-			</>
+			</div>
 		},
 		{
-			"title": `Contact Us`,
+			"title": "Contact Us",
 			"description":
-			<>
+			<div>
 				<div>
 					<p>If you have any questions about this Privacy Policy, You can contact us:</p>
 					<ul>
 						<li>By email: <a href="mailto: contact@teaminfernal.fr">contact@teaminfernal.fr</a></li>
 					</ul>
 				</div>
-			</>
+			</div>
 		},
 	],
 };

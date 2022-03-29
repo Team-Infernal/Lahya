@@ -1,24 +1,53 @@
 @import "../../styles/variables";
 
-#homepage {
+main {
+	padding: 0 !important;
+}
 
+#homepage {
 	color: $textDark;
 
-	&-title {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 50vh;
-
-		h1 {
-			margin: 1rem;
-			font-size: 7rem;
+	#section {
+		&-1 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 90vh;
+	
+			h1 {
+				margin: 1rem;
+				font-size: 5rem;
+			}
+	
+			p {
+				margin: 1rem;
+				font-size: 2rem;
+			}
 		}
 
-		p {
-			margin: 1rem;
-			font-size: 2rem;
+		&-2 {
+			padding: 4rem;
+			display: flex;
+			flex-direction: row;
+			gap: 8rem;
+			background-color: $dark;
+			color: $light;
+
+			p {
+				margin: 0;
+				font-size: 2rem;
+			}
+
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				&-reco {
+					text-align: right;
+				}
+			}
 		}
 	}
 }

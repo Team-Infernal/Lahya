@@ -9,7 +9,7 @@ const Privacy = () => {
                         return (
                             <div key={section.title.toLowerCase()} className="Privacy-section">
                                 <h2>{section.title}</h2>
-                                <p>{section.description}</p>
+                                {section.description}
                             </div>
                         )
                     })

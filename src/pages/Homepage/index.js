@@ -1,5 +1,6 @@
-import Login from "../../components/login";
+// import Login from "../../components/login";
 import config from "../../config";
+import { Section1, Section2 } from "./sections";
 
 import "./styles.scss";
 
@@ -8,13 +9,11 @@ const Homepage = () => {
 
     return (
         <div id="homepage">
-            <div id="homepage-title">
-                <h1>Welcome to <span className="accent-primary">Lahya</span>!</h1>
-                <p className="italic">The place to find your dream job & internship.</p>
-            </div>
-            <div id="homepage-login">
+            <Section1 />
+            {/* <div id="homepage-login">
                 <Login />
-            </div>
+            </div> */}
+            <Section2 /> 
         </div>
     )
 }

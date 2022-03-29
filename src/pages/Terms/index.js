@@ -10,7 +10,7 @@ const Terms = () =>{
                         return (
                             <div key={section.title.toLowerCase()} className="Terms-section">
                                 <h2>{section.title}</h2>
-                                <p>{section.description}</p>
+                                {section.description}
                             </div>
                         )
                     })
