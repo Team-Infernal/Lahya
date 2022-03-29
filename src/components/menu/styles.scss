@@ -34,13 +34,16 @@
 
 			& div {
 				cursor: pointer;
-				padding: 2rem;
 				transition: background-color 150ms ease-in-out;
 				
 				& a {
 					text-decoration: none;
 					color: inherit;
 					font-size: 1.5rem;
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					padding: 2rem;
 				}
 
 				&:hover {

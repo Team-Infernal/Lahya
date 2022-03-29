@@ -4,9 +4,8 @@ import config from "../../config";
 import "./styles.scss";
 
 const Menu = ({ setMenuState }) => {
-
-	const location = useLocation();
-	console.log(location);
+	
+	const { pathname } = useLocation();
 
 	return (
 		<div id="menu">
@@ -32,7 +31,7 @@ const Menu = ({ setMenuState }) => {
 				{
 					config.menu.right.map(section => (
 						<div key={section.name.replace(" ", "").toLowerCase()} onClick={() => setMenuState(false)}>
-							<NavLink to={section.route} className={location.pathname === section.route ? "bold" : null}>{ section.name }</NavLink>
+							<NavLink to={section.route} className={pathname === section.route ? "bold" : null}>{pathname === section.route ? <i className="fas fa-angle-right fa-fw"></i> : null}{section.name}</NavLink>
 						</div>
 					))
 				}

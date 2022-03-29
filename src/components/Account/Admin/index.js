@@ -20,22 +20,43 @@ const Admin = () => {
                 return null;
             })
         })
-    }, []);
+        $.get("http://localhost:3002/api/company", data => {
+            data.map(company => {
+                $("#selbusiness").append(`<option value="${company.id}">${company.name}</option>`)
+                return null;
+            })
+        })
+    },[]);
 	return (
-		<div id="espace-administation">
-            <h1>Espace Administation</h1>
-            <form action="http://localhost/Lahya/server/action.php" method="post">
+		<div id="espace-administration">
+            <h1>Espace Administration</h1>
+            <form action="http://localhost/Lahya/server/php/action.php" method="post">
                 <label htmlFor="student">Students</label>
                 <select name="student" id="selstudent"></select>
+                <input type="submit" name="action" value="Create" id="addstudent"/>
                 <input type="submit" name="action" value="Update" id="upstudent"/>
                 <input type="submit" name="action" value="Delete" id="delstudent"/>
             </form>  
-            <form action="./action.php" method="post">         
+            <form action="http://localhost/Lahya/server/php/action.php" method="post">         
                 <label htmlFor="tutor">Tutor</label>
-                <select name="tutor" id="seltutor"></select>
-                
+                <select name="tutor" id="seltutor"></select>    
+                <input type="submit" name="action" value="Create" id="addtutor"/>            
                 <input type="submit" value="Update" id="uptutor"/>
                 <input type="submit" value="Delete" id="deltutor"/>
+            </form>
+            <form action="http://localhost/Lahya/server/php/action.php" method="post">         
+                <label htmlFor="business">Business</label>
+                <select name="business" id="selbusiness"></select>
+                <input type="submit" value="Create" id="addbusiness"/>
+                <input type="submit" value="Update" id="upbusiness"/>
+                <input type="submit" value="Delete" id="delbusiness"/>
+            </form>
+            <form action="http://localhost/Lahya/server/php/action.php" method="post">         
+                <label htmlFor="offers">Offers</label>
+                <select name="offers" id="seloffers"></select>
+                <input type="submit" value="Create" id="addoffer"/>
+                <input type="submit" value="Update" id="upoffer"/>
+                <input type="submit" value="Delete" id="deloffer"/>
             </form>
 		</div>
 	)

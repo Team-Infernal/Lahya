@@ -1,0 +1,75 @@
+@import "../../styles/variables";
+
+#login,
+#register {
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+
+	&-title {
+		margin: 0 0 3rem 0;
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		input:not([type="submit"]) {
+			padding: 1rem 2rem;
+			border-radius: 10rem;
+			border: none;
+			box-shadow: 0 0 10px $lightish;			
+			font-size: 1.5rem;
+			transition: box-shadow 150ms ease-in-out;
+		
+			&:hover {
+				box-shadow: 0 0 5px $accentPrimaryMain;
+			}
+
+			&:focus {
+				outline: 2px solid $accentPrimaryMain;
+				box-shadow: none;
+			}
+		}
+
+		input[type="submit"] {
+			padding: 1rem 2rem;
+			border-radius: 10rem;
+			border: none;
+			font-size: 1.5rem;
+			background-color: $accentSecondaryMain;
+			cursor: pointer;
+			transition: background-color 100ms ease-in-out;
+
+			&:hover {
+				background-color: $accentSecondaryDark;
+			}
+		}
+
+		&-tc {
+			display: flex;
+			flex-direction: row;
+			gap: 2rem;
+		}
+	}
+
+	&-login,
+	&-register {
+		text-align: center;
+		
+		a {
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
