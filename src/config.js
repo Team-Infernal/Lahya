@@ -18,7 +18,7 @@ const config = {
 		"right": [
 			{
 				"route": "/",
-				"name": "Accueil",
+				"name": "Home",
 			},
 			{
 				"route": "/find-job",

@@ -1,21 +1,18 @@
-import config from '../../config.js'
+import config from '../../config.js';
+import "./styles.scss";
 
 const Privacy = () => {
     return (
-        <>
-			<div id="Privacy">
-                {
-                    config.privacy.map(section => {
-                        return (
-                            <div key={section.title.toLowerCase()} className="Privacy-section">
-                                <h2>{section.title}</h2>
-                                {section.description}
-                            </div>
-                        )
-                    })
-                }
-			</div>
-        </>
+        <div id="privacy">
+        {
+            config.privacy.map(section => (
+                <div key={section.title.toLowerCase()} className="Privacy-section">
+                    <h2>{section.title}</h2>
+                    {section.description}
+                </div>
+            ))
+        }
+        </div>
     )
 }
 

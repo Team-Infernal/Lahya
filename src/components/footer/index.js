@@ -28,7 +28,7 @@ const Footer = () => {
 
             <div id="footer-rights">
                 <div id="footer-rights-text">
-                    <p><span>All rights reserved</span><span><a href="https://teaminfernal.fr" rel="noreferrer" target="_blank">Infernal</a>, 2022</span></p>
+                    <p><span>All rights reserved</span><span><a href="https://teaminfernal.fr" rel="noreferrer" target="_blank">Powered by Infernal</a>, 2022</span></p>
                     <p>
                         {
                             config.footer.map(section => (

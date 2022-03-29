@@ -1,6 +1,7 @@
 $light: #f8f8ff;
-$darkish: #2c2c2c;
+$lightish: darken($light, 10%);
 $dark: #0d0d0d;
+$darkish: lighten($dark, 10%);
 
 $accentPrimaryMain: #2f01e7;
 $accentPrimaryLight: #3401fe;

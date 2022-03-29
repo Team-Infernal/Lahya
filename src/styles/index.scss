@@ -1,5 +1,24 @@
 @import "./variables";
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: $dark;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $accentSecondaryMain;
+	border: solid 2px $dark;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: $accentSecondaryDark;
+}
+
+
 body {
 	margin: 0;
 	font-family: "Montserrat Alternates", sans-serif;

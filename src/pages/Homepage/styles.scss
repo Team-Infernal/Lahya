@@ -48,6 +48,78 @@ main {
 					text-align: right;
 				}
 			}
+
+			img {
+				border-radius: 2rem;
+			}
+		}
+
+		&-3 {
+			padding: 4rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&-carousel {
+				display: flex;
+				flex-direction: column;
+
+				&-buttons {
+					margin-top: 2rem;
+					display: flex;
+					flex-direction: row;
+					gap: 2rem;
+					justify-content: center;
+
+					> div {
+						height: 1rem;
+						width: 5rem;
+						background-color: $accentSecondaryMain;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		&-4 {
+			padding: 4rem 15rem;
+			display: flex;
+			flex-direction: column;
+			gap: 4rem;
+
+			&-students,
+			&-pros,
+			&-partners {
+				font-size: 3rem;
+
+				& h3 {
+					margin: 0;
+				}
+
+				.section-4-details {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					gap: 4rem;
+	
+					& i {
+						font-size: 10rem;
+						padding: 0 5rem;
+					}
+				}
+
+				&:nth-child(2n) {
+					.section-4-details {
+						flex-direction: row-reverse;
+					}
+
+					h3 {
+						text-align: right;
+					}
+				}
+			}
+
 		}
 	}
 }
