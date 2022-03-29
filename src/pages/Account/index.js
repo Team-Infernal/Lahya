@@ -6,7 +6,7 @@ const Account = () => {
 
     return (
         <div id= "Account">
-            <Admin />
+            <Admin/>
         </div>
     )
 }
