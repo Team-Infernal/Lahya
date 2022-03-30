@@ -1,6 +1,6 @@
 //import Admin from "../../components/Account/Admin";
 import config from "../../config.js";
-import Tutor from "../../components/Account/Tutor";
+import Admin from "../../components/Account/Admin";
 //import Student from "../../components/Account/Student";
 
 const Account = () => {
@@ -8,7 +8,7 @@ const Account = () => {
 
     return (
         <div id= "Account">
-            <Tutor/>
+            <Admin/>
         </div>
     )
 }

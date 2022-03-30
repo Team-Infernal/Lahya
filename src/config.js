@@ -21,12 +21,8 @@ const config = {
 				"name": "Home",
 			},
 			{
-				"route": "/find-job",
+				"route": "/jobs",
 				"name": "Find a Job",
-			},
-			{
-				"route": "/news",
-				"name": "News",
 			},
 			{
 				"route": "/account",
