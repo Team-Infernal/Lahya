@@ -1,32 +1,33 @@
 @import "../../styles/variables";
 
 #about {
-	height: 75vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	margin-left:3rem;
-	margin-right: 3rem;
-	font-size:20px;
+	margin: 4rem;
 
-	h1 {
+	&-title {
 		font-size: 3rem;
 		margin: 0;
 	}
 
-	p {
-		margin-left: 10rem;
-		margin-right: 10rem;
-
+	&-infernal {
+		a {
+			color: $accentSecondaryDark;
+			text-decoration: none;
+			font-weight: bold;
+		}
 	}
 
-	ul {
-		margin: 0;
-		padding: 0;
+	&-members {
+		font-size: 2rem;
+		margin-left: 2rem;
 	}
 
-	b {
-		color:$accentSecondaryDark;
+	&-desc {
+		&-1,
+		&-2 {
+			font-size: 2rem;
+		}
 	}
 }

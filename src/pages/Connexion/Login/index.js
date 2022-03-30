@@ -9,7 +9,7 @@ const Login = () => {
 	return (
 		<div id="login">
 			<h1 id="login-title">Login to {config.site.name}</h1>
-			<form id="login-form" method="post" action="http://localhost/Lahya/server/php/login.php">
+			<form id="login-form" method="post" action="http://localhost/server/php/login.php">
 				<input type="email" placeholder="Email" name="email" required />
 				<input type="password" placeholder="Password" name="password" required />
 				<input type="submit" value="Login" />

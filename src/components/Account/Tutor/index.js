@@ -21,6 +21,9 @@ const Tutor = () => {
                 return null;
             })
         })
+        $.get("http://localhost:3002/api/subject", data => {
+            
+    })
     },[]);
 	return (
         <div>
