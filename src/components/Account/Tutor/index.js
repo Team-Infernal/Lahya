@@ -1,7 +1,5 @@
-import config from "../../../config";
 import { useEffect } from "react";
 import $ from "jquery";
-import Offers from "../../offers";
 const Tutor = () => {
     useEffect(() => {
         $.get("http://localhost:3002/api/users", data => {
@@ -25,6 +23,7 @@ const Tutor = () => {
             
     })
     },[]);
+    
 	return (
         <div>
             <div id="espace-administration">
@@ -50,9 +49,8 @@ const Tutor = () => {
                     <input type="submit" name="action" value="Create" id="addoffer" />
                     <input type="submit" name="action" value="Update" id="upoffer"/>
                     <input type="submit" name="action" value="Delete" id="deloffer"/>
-                </form>  
+                </form>
             </div>
-            <Offers />
         </div>
 	)
 }

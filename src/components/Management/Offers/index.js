@@ -1,25 +1,60 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import $ from "jquery";
-//import "./styles.scss";
+
+import { OfferForm } from "../forms";
+import { getId, getRole } from "../../../functions";
 
 const ManaOffers = () => {
+
+    const [offers, setOffers] = useState([]);
+    const [offer, setOffer] = useState({
+        type: "",
+        role: "",
+        data: {},
+    });
+
+    const role = getRole();
+    const id = getId();
+
     useEffect(() => {
         $.get("http://localhost:3002/api/internship", data => {
-            data.map(offers => {
-                $("#seloffers").append(`<option value="${offers.id}">${offers.title}</option>`)
+            data.filter(offer => {
+                return role === "admin" || id === offer.id_company.toString();
+            }).map(offer => {
+                setOffers(offers => [...offers, offer]);
                 return null;
-            })
-        })
-        $()
-    }, [])
+            });
+        });
+    }, [id, role]);
 
-    return(
+    return (
         <div>        
-            <label htmlFor="offers">Offers</label>
-            <select name="offers" id="seloffers"></select>
-            <button id="addoffer">Add</button>
-            <button id="editoffer">Edit</button>
-            <button id="deleteoffer">Delete</button> 
+            <label htmlFor="offer">Offers</label>
+            <select name="offer" id="offer-select">
+            {
+                offers.map(offer => <option key={`${offer.id}${offer.title.replace(" ", "").toLowerCase()}`} value={offer.id}>{offer.title}</option>)
+            }
+            </select> 
+            <button id="offer-add" onClick={() => setOffer({
+                type: "add",
+                role: role,
+                data: {},
+            })}>Add</button>
+            <button id="offer-edit" onClick={() => setOffer({
+                type: "edit",
+                role: role,
+                data: offers.filter(offer => offer.id.toString() === $("#offer-select").val())[0],
+            })}>Edit</button>
+            <button id="offer-delete" onClick={() => setOffer({
+                type: "delete",
+                role: role,
+                data: offers.filter(offer => offer.id.toString() === $("#offer-select").val())[0],
+            })}>Delete</button>
+            <div id="offer-form">
+            {
+                offer.type ? <OfferForm data={offer} /> : null
+            }
+            </div>
         </div>
     )
 }

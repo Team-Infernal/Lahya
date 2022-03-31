@@ -13,7 +13,7 @@ export const Section2 = () => {
 	return (
 		<section id="section-2">
 			<div id="section-2-text">
-				<p id="section-2-text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Nulla facilisi.</p>
+				<p id="section-2-text-content">As an old friend said "This painting is not really appreciated, to feed you you break it, by working you earn it, coming out of the oven it is golden". He was obviously talking about the crust. If you also want to find a job as an intern like "passes muraille" and "passes everywhere" for more than 30 years now, I recommend Lahya. When I'm bored in the fort and I don't yell "always higher, always louder" I'm on Lahya. So join a community of one hundred million French people and find the internship of your dreams.</p>
 				<p id="section-2-text-reco" className="bold">Recommended by Olivier Minne</p>
 			</div>
 			<div>

@@ -1,12 +1,16 @@
 {
 	"name": "lahya",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.2",
 		"@testing-library/react": "^12.1.4",
 		"@testing-library/user-event": "^13.5.0",
+		"bcrypt": "^5.0.1",
+		"blueimp-md5": "^2.19.0",
+		"hash-parse": "^1.0.24",
 		"jquery": "^3.6.0",
+		"moment": "^2.29.1",
 		"react": "^17.0.2",
 		"react-cookie": "^4.1.1",
 		"react-dom": "^17.0.2",

@@ -19,19 +19,34 @@ const config = {
 			{
 				"route": "/",
 				"name": "Home",
+				auth: false,
 			},
 			{
-				"route": "/jobs",
+				"route": "/offers",
 				"name": "Find a Job",
+				auth: true,
 			},
 			{
-				"route": "/account",
-				"name": "My Account",
+				"route": "/business",
+				"name": "All Businesses",
+				auth: true,
 			},
 			{
 				"route": "/about",
 				"name": "About Us",
+				auth: false,
 			},
+			{
+				route: "/account",
+				name: "My Account",
+				auth: true,
+			},
+			{
+				route: "/logout",
+				name: "Logout",
+				auth: true,
+			},
+			
 		],
 	},
 	"footer": [

@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 
+import { isLoggedIn } from "../../functions";
 import config from "../../config";
 import "./styles.scss";
 
@@ -28,13 +29,22 @@ const Menu = ({ setMenuState }) => {
 					<i className="fas fa-xmark fa-fw"></i>
 				</div>
 				<div id="menu-right-details">
-				{
-					config.menu.right.map(section => (
-						<div key={section.name.replace(" ", "").toLowerCase()} onClick={() => setMenuState(false)}>
-							<NavLink to={section.route} className={pathname === section.route ? "bold" : null}>{pathname === section.route ? <i className="fas fa-angle-right fa-fw"></i> : null}{section.name}</NavLink>
+					{
+						config.menu.right
+							.filter(section => !section.auth || isLoggedIn())
+							.map(section => (
+							<div key={section.name.replace(" ", "").toLowerCase()} onClick={() => setMenuState(false)}>
+								<NavLink to={section.route} className={pathname === section.route ? "bold" : null}>{pathname === section.route ? <i className="fas fa-angle-right fa-fw"></i> : null}{section.name}</NavLink>
+							</div>
+						))
+					}
+					{
+						!isLoggedIn()
+						? <div onClick={() => setMenuState(false)}>
+							<NavLink to="/login">Login</NavLink>
 						</div>
-					))
-				}
+						: null
+					}
 				</div>
 			</div>
 		</div>

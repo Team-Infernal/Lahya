@@ -7,7 +7,9 @@ import Terms from "../../pages/Terms";
 import Account from "../../pages/Account";
 import Login from "../../pages/Connexion/Login";
 import Register from "../../pages/Connexion/Register";
-import Offers from "../offers";
+import Offers from "../../pages/Offers";
+import Business from "../../pages/Business";
+import Logout from "../../pages/Connexion/Logout";
 
 import NoMatch from "../../pages/NoMatch";
 
@@ -25,7 +27,8 @@ const Content = () => {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/offers" element={<Offers />} />
-
+				<Route path="/business" element={<Business />} />
+				<Route path="/logout" element={<Logout />} />
 				<Route path="*" element={<NoMatch />} />
 			</Routes>
 		</main>
