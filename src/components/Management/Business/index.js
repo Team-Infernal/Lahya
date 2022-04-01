@@ -22,28 +22,28 @@ const ManaBusiness = () => {
 
     return (
         <div>        
-            <label htmlFor="business">Offers</label>
+            <label htmlFor="business">Companies</label>
             <select name="business" id="business-select">
             {
                 businesses.map(business => <option key={`${business.id}${business.name.replace(" ", "").toLowerCase()}`} value={business.id}>{business.name}</option>)
             }
             </select> 
-            <button id="offer-add" onClick={() => setBusiness({
+            <button id="business-add" onClick={() => setBusiness({
                 type: "add",
                 role: role,
                 data: {},
             })}>Add</button>
-            <button id="offer-edit" onClick={() => setBusiness({
+            <button id="business-edit" onClick={() => setBusiness({
                 type: "edit",
                 role: role,
                 data: businesses.filter(business => business.id.toString() === $("#business-select").val())[0],
             })}>Edit</button>
-            <button id="offer-delete" onClick={() => setBusiness({
+            <button id="business-delete" onClick={() => setBusiness({
                 type: "delete",
                 role: role,
                 data: businesses.filter(business => business.id.toString() === $("#business-select").val())[0],
             })}>Delete</button>
-            <div id="offer-form">
+            <div id="business-form">
             {
                 business.type ? <BusinessForm data={business} /> : null
             }

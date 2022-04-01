@@ -1,6 +1,6 @@
 {
 	"name": "lahya",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.2",
@@ -43,5 +43,6 @@
 			"last 1 safari version"
 		]
 	},
-	"proxy": "http://localhost:3002/"
+	"proxy": "http://localhost:3002/",
+	"homepage": "https://lahya.net/"
 }

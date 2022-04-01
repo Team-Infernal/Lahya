@@ -20,9 +20,9 @@ const Offers = () => {
                 + "</div>"
                 $("#offers-content").append(content)
                 return 0;
-            })
-        })
-    });
+            });
+        });
+    }, []);
 
     return (
         <>

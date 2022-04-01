@@ -10,7 +10,7 @@ const Register = () => {
 		<div id="register">
 			<div id="register-container">
 				<h1 id="register-title">Create a {config.site.name} account</h1>
-				<form id="register-form" method="post" action="http://localhost/server/php/register.php">
+				<form id="register-form" method="post" action="/auth/register.php">
 					<div id="register-form-tc">
 						<input type="text" placeholder="First Name" name="first_name" required />
 						<input type="text" placeholder="Last Name" name="last_name" required />

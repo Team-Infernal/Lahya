@@ -5,7 +5,7 @@ import Admin from "../../components/Account/Admin";
 import Student from "../../components/Account/Student";
 import Tutor from "../../components/Account/Tutor";
 import Business from "../../components/Account/Business"; 
-import { getRole, isLoggedIn } from "../../functions/index.js";
+import { getRole, isLoggedIn } from "../../functions";
 
 const Account = () => {
     document.title = `My Account • ${config.site.name}`;

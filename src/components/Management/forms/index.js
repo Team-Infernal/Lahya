@@ -4,7 +4,7 @@ import $ from "jquery";
 export const Form = props => {
 
 	const { type, role, data } = props.data;
-	const { id, first_name, last_name, login, school, class: class_name } = data;
+	const { id, first_name, last_name, login, hash, school, class: class_name } = data;
 
 	return (
 		<form action="http://localhost/server/php/form.php" method="POST">
@@ -21,34 +21,54 @@ export const Form = props => {
 			</h2>
 			<fieldset>
 				<legend>Information</legend>
-				<div>
-					<label htmlFor="first_name">First Name</label>
-					<input type="text" name="first_name" id="input_first_name" defaultValue={data ? first_name : null} disabled={type === "delete"} required/>
-				</div>
-				<div>
-					<label htmlFor="last_name">Last name</label>
-					<input type="text" name="last_name" id="input_last_name" defaultValue={data ? last_name : null} disabled={type === "delete"} required/>
-				</div>
-				<div>
-					<label htmlFor="email">Email</label>
-					<input type="email" name="email" id="inputEmail" defaultValue={data ? login : null} disabled={type === "delete"} required/>
-				</div>
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="first_name">First Name</label>
+						<input type="text" name="first_name" defaultValue={data ? first_name : null} required/>
+					</div>
+					: <input type="hidden" name="first_name" defaultValue={data ? first_name : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="last_name">Last Name</label>
+						<input type="text" name="last_name" defaultValue={data ? last_name : null} required/>
+					</div>
+					: <input type="hidden" name="last_name" defaultValue={data ? last_name : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="email">Email</label>
+						<input type="text" name="email" defaultValue={data ? login : null} required/>
+					</div>
+					: <input type="hidden" name="email" defaultValue={data ? login : null} required/>
+				}
 				{
 					type === "add"
 					? <div>
 						<label htmlFor="password">Password</label>
 						<input type="password" name="password" id="inputPassword" required/>
 					</div>
-					: null
+					: <input type="hidden" name="password" value={data ? hash : null} />
 				}
-				<div>
-					<label htmlFor="school">School</label>
-					<input type="text" name="school" id="input_school" defaultValue={data ? school : null} disabled={type === "delete"} required/>
-				</div>
-				<div>
-					<label htmlFor="class">Class</label>
-					<input type="text" name="class" id="class" defaultValue={data ? class_name : null} disabled={type === "delete"} required/>
-				</div>
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="school">School</label>
+						<input type="text" name="school" defaultValue={data ? school : null} required/>
+					</div>
+					: <input type="hidden" name="school" defaultValue={data ? school : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="class">Class</label>
+						<input type="text" name="class" defaultValue={data ? class_name : null} required/>
+					</div>
+					: <input type="hidden" name="class" defaultValue={data ? class_name : null} required/>
+				}
 				<input type="hidden" name="role" value={role} />
 				<input type="hidden" name="type" value={type} />
 				{
@@ -112,26 +132,46 @@ export const OfferForm = props => {
 					</div>
 					: <input type="hidden" name="company" value={id_company} />
 				}
-				<div>
-					<label htmlFor="title">Title</label>
-					<input type="text" name="title" defaultValue={data ? title : null} disabled={type === "delete"} required/>
-				</div>
-				<div>
-					<label htmlFor="description">Description</label>
-					<input type="text" name="description" defaultValue={data ? description : null} disabled={type === "delete"} required/>
-				</div>
-				<div>
-					<label htmlFor="minor">Minor</label>
-					<input type="text" name="minor" defaultValue={data ? minor : null} disabled={type === "delete"} required/>
-				</div>
-				<div>
-					<label htmlFor="salary">Salary</label>
-					<input type="number" name="salary" defaultValue={data ? salary : null} disabled={type === "delete"} min="0" required/>
-				</div>
-				<div>
-					<label htmlFor="places_available">Available positions</label>
-					<input type="number" name="places_available" defaultValue={data ? places_available : null} disabled={type === "delete"} min="1" required/>
-				</div>
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="title">Title</label>
+						<input type="text" name="title" defaultValue={data ? title : null} required/>
+					</div>
+					: <input type="hidden" name="title" defaultValue={data ? title : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="description">Description</label>
+						<textarea name="description" defaultValue={data ? description : null} required/>
+					</div>
+					: <input type="hidden" name="description" defaultValue={data ? description : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="minor">Minor</label>
+						<input type="text" name="minor" defaultValue={data ? minor : null} required/>
+					</div>
+					: <input type="hidden" name="minor" defaultValue={data ? minor : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="salary">Salary</label>
+						<input type="number" name="salary" defaultValue={data ? salary : null} min="0" required/>
+					</div>
+					: <input type="hidden" name="salary" defaultValue={data ? salary : null} required/>
+				}
+				{
+					type !== "delete"
+					? <div>
+						<label htmlFor="places_available">Available positions</label>
+						<input type="number" name="places_available" defaultValue={data ? places_available : null} min="1" required/>
+					</div>
+					: <input type="hidden" name="places_available" defaultValue={data ? places_available : null} required/>
+				}
 				<input type="hidden" name="date" value={lasts} />
 				<input type="hidden" name="type" value={type} />
 				<input type="hidden" name="id" value={id} />
@@ -165,11 +205,11 @@ export const BusinessForm = props => {
 			<h2>
 			{
 				type === "add"
-				? "Add an offer"
+				? "Add a company"
 				: type === "edit"
-				? `Edit ${data.title}`
+				? `Edit ${name}`
 				: type === "delete"
-				? `Delete ${data.title}`
+				? `Delete ${name}`
 				: null
 			}
 			</h2>
@@ -177,11 +217,11 @@ export const BusinessForm = props => {
 				<legend>Information</legend>
 				<div>
 					<label htmlFor="name">Name</label>
-					<input type="text" name="name" defaultValue={data ? data.name : null} disabled={type === "delete"} required/>
+					<input type="text" name="name" defaultValue={data ? name : null} disabled={type === "delete"} required/>
 				</div>
 				<div>
 					<label htmlFor="visible">Visible</label>
-					<input type="checkbox" name="visible" defaultChecked={data ? data.visible : null} disabled={type === "delete"} required/>
+					<input type="checkbox" name="visible" defaultChecked={data ? students_visible : null} disabled={type === "delete"} required/>
 				</div>
 				<div className="g2">
 					<button type="submit">
