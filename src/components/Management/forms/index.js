@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import $ from "jquery";
+import moment from "moment";
 
 export const Form = props => {
 
@@ -7,7 +8,7 @@ export const Form = props => {
 	const { id, first_name, last_name, login, hash, school, class: class_name } = data;
 
 	return (
-		<form action="http://localhost/server/php/form.php" method="POST">
+		<form action="https://lahya.net/auth/form.php" method="POST">
 			<h2>
 			{
 				type === "add"
@@ -20,7 +21,6 @@ export const Form = props => {
 			}
 			</h2>
 			<fieldset>
-				<legend>Information</legend>
 				{
 					type !== "delete"
 					? <div>
@@ -76,7 +76,7 @@ export const Form = props => {
 					? <input type="hidden" name="id" value={id} />
 					: null
 				}
-				<div className="g2">
+				<div>
 					<button type="submit">
 					{
 						type === "add"
@@ -98,15 +98,15 @@ export const OfferForm = props => {
 
 	const [companies, setCompanies] = useState([]);
 	
-	const { type, role, data } = props.data;
+	const { type, role, is, data } = props.data;
 	const { id, title, description, minor, lasts, salary, published_at, places_available, id_company, id_address } = data;
 
 	useEffect(() => {
-		$.get("http://localhost:3002/api/company", data => setCompanies(data));
+		$.get("https://lahya.net/api/company", data => setCompanies(data));
 	}, [id_company]);
 
 	return (
-		<form action="http://localhost/server/php/form.php" method="POST">
+		<form action="https://lahya.net/auth/form.php" method="POST">
 			<h2>
 			{
 				type === "add"
@@ -119,7 +119,6 @@ export const OfferForm = props => {
 			}
 			</h2>
 			<fieldset>
-				<legend>Information</legend>
 				{
 					role === "admin" && type === "add"
 					? <div>
@@ -172,11 +171,18 @@ export const OfferForm = props => {
 					</div>
 					: <input type="hidden" name="places_available" defaultValue={data ? places_available : null} required/>
 				}
-				<input type="hidden" name="date" value={lasts} />
+				{
+					type === "add" || type === "edit"
+					? <div>
+						<label htmlFor="lasts">Lasts</label>
+						<input type="date" name="lasts" required />
+					</div>
+					: <input type="hidden" name="date" value={lasts} />
+				}
 				<input type="hidden" name="type" value={type} />
 				<input type="hidden" name="id" value={id} />
-				<input type="hidden" name="published_at" value={published_at} />
-				<input type="hidden" name="id_address" value={id_address} />
+				<input type="hidden" name="id_address" value={id_address || 1} />
+				<input type="hidden" name="is" value={is} />
 				<div className="g2">
 					<button type="submit">
 					{
@@ -197,11 +203,11 @@ export const OfferForm = props => {
 
 export const BusinessForm = props => {
 
-	const { type, role, data } = props.data;
-	const { name, students_visible } = data;
+	const { type, role, is, data } = props.data;
+	const { name, students_accepted, students_visible, id} = data;
 
 	return (
-		<form action="http://localhost/server/php/form.php" method="POST">
+		<form action="https://lahya.net/auth/form.php" method="POST">
 			<h2>
 			{
 				type === "add"
@@ -214,15 +220,22 @@ export const BusinessForm = props => {
 			}
 			</h2>
 			<fieldset>
-				<legend>Information</legend>
 				<div>
 					<label htmlFor="name">Name</label>
 					<input type="text" name="name" defaultValue={data ? name : null} disabled={type === "delete"} required/>
 				</div>
 				<div>
-					<label htmlFor="visible">Visible</label>
-					<input type="checkbox" name="visible" defaultChecked={data ? students_visible : null} disabled={type === "delete"} required/>
+					<label htmlFor="students_accepted">students_accepted</label>
+					<input type="text" name="students_accepted" defaultValue={data ? students_accepted : null} disabled={type === "delete"} required/>
 				</div>
+				<div>
+					<label htmlFor="visible">Visible</label>
+					<input type="checkbox" name="visible" defaultChecked={data ? students_visible : null} hidden={type === "delete"} />
+				</div>
+				<input type="hidden" name="is" value={is} />
+				<input type="hidden" name="id" value={id} />
+				<input type="hidden" name="type" value={type} />
+
 				<div className="g2">
 					<button type="submit">
 					{

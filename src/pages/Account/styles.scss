@@ -1,0 +1,128 @@
+@import "../../styles/variables";
+
+#account {
+	margin: 4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	&-title {
+		font-size: 3rem;
+	}
+
+	#account-admin,
+	#account-tutor,
+	#account-business,
+	#account-student {
+		&-title {
+			margin: 0;
+			font-size: 3rem;
+		}
+	}
+
+	#mana-offer,
+	#mana-student,
+	#mana-tutor,
+	#mana-business {
+		&-title {
+			font-size: 2rem;
+		}
+
+		&-content {
+			display: flex;
+			gap: 2rem;
+
+			select {
+				padding: 0.5rem 2rem;
+				background-color: transparent;
+				outline: none;
+				border: none;
+				box-shadow: 0 0 5px $lightish;
+				border-radius: 1rem;
+				transition: all 100ms ease-in-out;
+				text-align: center;
+
+				&:hover {
+					box-shadow: 0 0 5px $accentPrimaryMain;
+				}
+			}
+
+			button {
+				padding: 0.5rem 2rem;
+				border-radius: 1rem;
+				box-shadow: 0 0 5px $lightish;
+				transition: all 100ms ease-in-out;
+				text-transform: uppercase;
+				font-weight: bold;
+
+				&:hover {
+					box-shadow: 0 0 5px $accentPrimaryMain;
+				}
+			}
+		}
+
+		&-form {
+			& fieldset {
+				border: none;
+				padding: 2rem;
+				box-shadow: 0 0 5px $lightish;
+				border-radius: 2rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+
+				& label {
+					margin-right: 2rem;
+				}
+
+				button[type="submit"] {
+					padding: 1rem 2rem;
+					border-radius: 1rem;
+					text-transform: uppercase;
+					box-shadow: 0 0 5px $lightish;
+					transition: all 100ms ease-in-out;
+
+					&:hover {
+						box-shadow: 0 0 5px $accentPrimaryMain;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $mobilemax) {
+		margin: 2rem;
+
+		#account-admin,
+		#account-tutor,
+		#account-business,
+		#account-student {
+			&-title {
+				font-size: 2rem;
+			}
+		}
+
+		#mana-offer,
+		#mana-student,
+		#mana-tutor,
+		#mana-business {
+			&-title {
+				font-size: 1.5rem;
+			}
+
+			&-content {
+				flex-direction: column;
+				gap: 1rem;
+			}
+
+			&-form {
+				margin-bottom: 4rem;
+				& h2 {
+					font-size: 1rem;
+					margin-top: 2rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

@@ -68,7 +68,6 @@
 			& div {
 				cursor: pointer;
 				
-				
 				& a {
 					text-decoration: none;
 					color: inherit;
@@ -120,6 +119,25 @@
 
 		to {
 			transform: translateY(-100%);
+		}
+	}
+
+	@media screen and (max-width: $mobilemax) {
+		&-left {
+			display: none;
+		}
+
+		&-right {
+			width: 100%;
+
+			&-details {
+				& div {
+					& a {
+						font-size: 1.5rem;
+						padding: 1rem 2rem;
+					}
+				}
+			}
 		}
 	}
 }

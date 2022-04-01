@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+#offers {
+	margin: 4rem;
+
+	&-title {
+		font-size: 3rem;
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		.offer {
+			padding: 2rem;
+			border-radius: 2rem;
+			box-shadow: 0 0 5px $lightish;
+
+			&-title {
+				margin: 0 0 1rem 0;
+				font-size: 1.5rem;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: $mobilemax) {
+		margin: 2rem;
+
+		&-title {
+			font-size: 2rem;
+			text-align: center;
+		}
+	}
+}

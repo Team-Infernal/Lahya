@@ -122,4 +122,75 @@ main {
 
 		}
 	}
+
+	@media screen and (max-width: $mobilemax) {
+		#section {
+			&-1 {
+				h1 {
+					font-size: 2rem;
+				}
+
+				p {
+					font-size: 1.5rem;
+				}
+			}
+
+			&-2 {
+				padding: 2rem;
+				flex-direction: column;
+				gap: 0;
+
+				p {
+					text-align: center;
+					font-size: 1.25rem;
+					
+					&:last-child {
+						margin-top: 2rem;
+					}
+				}
+
+				img {
+					display: none;
+				}
+			}
+
+			&-4 {
+				padding: 2rem;
+
+				&-students,
+				&-pros,
+				&-partners {
+					font-size: 1.5rem;
+
+					& h3 {
+						text-align: center;
+					}
+
+					.section-4-details {
+						flex-direction: column;
+						gap: 0;
+
+						& i {
+							font-size: 5rem;
+							padding: 2rem 0;
+						}
+
+						& p {
+							margin: 0;
+						}
+					}
+
+					&:nth-child(2n) {
+						.section-4-details {
+							flex-direction: column;
+						}
+
+						h3 {
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
 }

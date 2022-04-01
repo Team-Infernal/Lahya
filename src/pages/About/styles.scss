@@ -30,4 +30,24 @@
 			font-size: 2rem;
 		}
 	}
+
+	@media screen and (max-width: $mobilemax) {
+		margin: 2rem;
+
+		&-title {
+			text-align: center;
+		}
+
+		&-members {
+			font-size: 1.25rem;
+			margin-left: 0;
+		}
+
+		&-desc {
+			&-1,
+			&-2 {
+				font-size: 1.25rem;
+			}
+		}
+	}
 }

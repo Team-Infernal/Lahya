@@ -1,7 +1,6 @@
 @import "../../styles/variables.scss";
 
 #navbar {
-	position: sticky;
 	background-color: $accentPrimaryMain;
 	color: $light;
 	display: flex;
@@ -28,6 +27,14 @@
 		&:hover {
 			cursor: pointer;
 			color: $accentSecondaryMain;
+		}
+	}
+
+	@media screen and (max-width: $mobilemax) {
+		justify-content: flex-end;
+
+		&-title {
+			display: none;
 		}
 	}
 }

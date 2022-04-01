@@ -1,26 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import $ from "jquery";
 import moment from "moment";
 
 import { isLoggedIn } from "../../functions";
+import "./styles.scss";
 
 const Offers = () => {
+
+    const [offers, setOffers] = useState([]);
     
     useEffect(() => {
-        $.get("http://localhost:3002/api/internship", data =>{
-            data.map(entreprise =>{
-                const content = "<div class='entreprise'>" +
-                "<h4 class='title'>Titre:" + entreprise["title"] + "</h4>"
-                + "<div class='description'>Description:" + entreprise["description"] + "</div>"
-                + "<div class='minor'>Mineure:" + entreprise["minor"] + "</div>"
-                + "<div class='lasts'>Date de fin de Stage" + moment(entreprise["lasts"]).format("DD/MM/YYYY") + "</div>"
-                + "<div class='salary'>Rémunération:" + Math.round(entreprise["salary"]) + "€</div>"
-                + "<div class='published_at'>Publié le:" + moment(entreprise["published_at"]).format("DD/MM/YYYY") + "</div>"
-                + "</div>"
-                $("#offers-content").append(content)
-                return 0;
-            });
+        $.get("https://lahya.net/api/internship", data =>{
+            data.map(offer => setOffers(offers => [...offers, offer]));
         });
     }, []);
 
@@ -30,8 +22,21 @@ const Offers = () => {
                 !isLoggedIn()
                 ? <Navigate to="/login" />
                 : <div id="offers">
-                    <h3> Latest offers </h3>
-                    <div id="offers-content"></div>
+                    <h3 id="offers-title">Latest offers</h3>
+                    <div id="offers-content">
+                        {
+                            offers.map(offer => (
+                                <div className="offer" key={offer.id}>
+                                    <h4 className="offer-title">{offer.title}</h4>
+                                    <p className="offer-description"><span className="bold">Description:</span> {offer.description}</p>
+                                    <p className="offer-minor"><span className="bold">Minor:</span> {offer.minor}</p>
+                                    <p className="offer-salary"><span className="bold">Salary:</span> {Math.round(offer.salary)}€</p>
+                                    <p className="offer-ends"><span className="bold">Ends</span> on {moment(offer.lasts).format("DD/MM/YYYY")}</p>
+                                    <p className="offer-published"><span className="bold">Published</span> on {moment(offer.published_at).format("DD/MM/YYYY")}</p>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
             }
         </>

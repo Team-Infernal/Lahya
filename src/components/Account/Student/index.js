@@ -2,8 +2,8 @@ import Application from "../../Application";
 
 const Student = () => {
 	return (
-		<div>
-        	<h1>Student</h1>
+		<div id="account-student">
+        	<h1 id="account-student-title">Student</h1>
 			<Application />
 		</div>
 	)
